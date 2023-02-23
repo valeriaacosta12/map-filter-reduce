@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map, reduce, filter</title>
+</head>
+<body>
+    <script>
+
+        let personas = [
+            {"nombre":"Juan", "edad":22},
+            {"nombre":"Raúl", "edad":45},
+            {"nombre":"Roberto", "edad":60}
+
+        ]
+        p1={"nombre":"Antonio", "edad":34}
+        p2={"nombre":"Daniel", "edad":12}
+        personas.push(p1);
+        personas.push(p2);
+
+        let personas_nombre = personas.map(x=>x.nombre);
+        console.log(personas_nombre);
+
+        let personas_edad = personas.filter(y=>y.edad>30);
+        console.log(personas_edad);
+
+        let suma = personas.reduce((acumulador, numero)=>acumulador+numero.edad, 0);
+        console.log(suma);
+    </script>
+</body>
+</html>
